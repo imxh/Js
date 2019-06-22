@@ -1,10 +1,10 @@
-var result = body
-
-let path = '/app_api/v5/getuserinfo';
-
+var body = $response.body;
+var url = $request.url;
+const path = '/app_api/v5/getuserinfo';
+let obj = JSON.parse(body)
 if (url.indexOf(path) != -1) {
-    var jsbody = JSON.parse(body);
-    jsbody.isvip = 1;
-    result = JSON.stringify(jsbody);
-}
-result;
+	obj["data"]["isvip"] = 1;
+	body = JSON.stringify(obj);
+ }
+
+$done({body});
