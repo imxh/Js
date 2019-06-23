@@ -4,7 +4,6 @@ const path = "/app_api/v5/getuserinfo/";
 let obj = JSON.parse(body);
 if (url.indexOf(path) != -1) {
 	obj["isvip"] = "1";
-	obj["Uviptime"] = "17357295680000";
 	body = JSON.stringify(obj);
  }
 $done({body});
