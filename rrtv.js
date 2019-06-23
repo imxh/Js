@@ -1,4 +1,4 @@
-var result = body
+var body = $response.body;
 
 let path1 = '/user/profile';
 let path2 = '/v3plus/user/detail';
@@ -28,4 +28,4 @@ if (url.indexOf(path3) != -1) {
     result = JSON.stringify(jsbody);
 }
 
-result;
+$done({body});
