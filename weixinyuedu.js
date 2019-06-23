@@ -12,4 +12,4 @@ $done({body});
 
 //by HoGer
 //hostname = i.weread.qq.com
-//http-response ^https?://i\.weread\.qq\.com/pay/memberCardSummary
+//http-response https?://i.weread.qq.com/pay/memberCardSummary
