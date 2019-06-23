@@ -8,3 +8,8 @@ if (url.indexOf(path) != -1) {
 	body = JSON.stringify(obj);
  }
 $done({body});
+
+
+//by HoGer
+//hostname = i.weread.qq.com
+//http-response ^https?://i\.weread\.qq\.com/pay/memberCardSummary
