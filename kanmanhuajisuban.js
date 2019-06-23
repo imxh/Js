@@ -7,3 +7,8 @@ if (url.indexOf(path) != -1) {
 	body = JSON.stringify(obj);
  }
 $done({body});
+
+
+//By HoGer
+//hostname = getuserinfo.321mh.com
+//http-response ^https?://getuserinfo\.321mh\.com/app_api/v5/getuserinfo/
