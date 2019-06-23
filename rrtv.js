@@ -1,8 +1,8 @@
 var body = $response.body;
-
-let path1 = '/user/profile';
-let path2 = '/v3plus/user/detail';
-let path3 = '/ad/getAll';
+var url = $request.url;
+let path1 = "/user/profile";
+let path2 = "/v3plus/user/detail";
+let path3 = "/ad/getAll";
 
 if (url.indexOf(path1) != -1) {
     var jsbody = JSON.parse(body);
