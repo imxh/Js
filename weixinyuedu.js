@@ -1,6 +1,6 @@
 var body = $response.body;
 var url = $request.url;
-const path = "/pay/memberCardSummary/";
+const path = "/pay/memberCardSummary";
 let obj = JSON.parse(body);
 if (url.indexOf(path) != -1) {
 	obj["expiredTime"] = 1591804799;
