@@ -1,0 +1,8 @@
+var body = $response.body;
+const path = "/pay/memberCardSummary";
+let obj = JSON.parse(body);
+if (url.indexOf(path) != -1) {
+	obj["remainTime"] = "86313600";
+	body = JSON.stringify(obj);
+ }
+$done({body});
