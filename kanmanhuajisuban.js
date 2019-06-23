@@ -12,4 +12,4 @@ $done({body});
 //看漫画极速版
 //By HoGer
 //hostname = getuserinfo.321mh.com
-//http-response ^https?://getuserinfo\.321mh\.com/app_api/v5/getuserinfo/
+//http-response https?://getuserinfo.321mh.com/app_api/v5/getuserinfo/
