@@ -21,7 +21,7 @@ $httpClient.get(hfapi, function(error, response, data){
         $done();                   
     } else {
         var mm = getwmatioin(data);
-        var title = "Surge与您相伴"+"`"+mm[0];
+        var title = mm[0] + "市" + " 与您相伴";
         var subtitle = "天气状况："+mm[1]+"  "+mm[3];
         var mation = "体感温度："+mm[2]+"℃"+"  "+"空气湿度："+mm[4]+"%"+"  "+"能见度："+mm[5]+"㎞"+"\n更新时间："+mm[6];
         $notification.post(title, subtitle, mation);
