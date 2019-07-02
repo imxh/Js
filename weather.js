@@ -32,7 +32,7 @@ $httpClient.get(hfapi, function(error, response, data){
 /* 原创作者(Made by Meeta)
 8，12，18三个时间点天气通知，可自行修改
 文本编辑模式下复制粘贴
-cron "0 8,12,18 * * *" script-path=https://raw.githubusercontent.com/imxh/js/master/weather.js
+cron "0 8,12,18 * * *" script-path=https://raw.githubusercontent.com/imxh/js/master/weather.js,script-update-interval=0
 新采用了和风天气api,天气通知比前一个内容更丰富等等（由于免费接口限制每日访问量，请大家不要设置高频天气通知）
 向通知中心发送通知，Surge iOS 上需开启通知总开关
 */
