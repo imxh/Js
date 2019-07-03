@@ -1,5 +1,5 @@
 const accounts = [
-    ["ssrcloud", "https://ssrcloud.org/auth/login", "example@ssrcloud.org", "12345678"]
+    ["ssrcloud", "https://ssrcloud.org/auth/login", "imxh@live.cn", "asdfghjkl"]
 ]
 
 async function launch() {
