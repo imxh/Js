@@ -1,15 +1,36 @@
-const weaapi = "https://www.tianqiapi.com/api/?version=v6"
-$httpClient.get(weaapi, function(error, response, data){
+const hfapi = "https://www.tianqiapi.com/api/?version=v6"
+function getwmatioin(data){
+    var obj = JSON.parse(data);
+    console.log(obj);
+    let city = obj.city;
+    let wea = obj.wea;
+    let tem = obj.tem;
+    let tem1 = obj.tem1;
+    let tem2 = obj.tem2;
+    let win = obj.win;
+    let win_speed = obj.win_speed;
+    let win_meter = obj.win_meter;
+    let air = obj.air;
+    let air_level = obj.air_level;
+    let date = obj.date;
+    let week = obj.week;
+    let update_time = obj.update_time;
+    let mm = [city, wea, tem, tem1, tem2, win, win_speed, win_meter, air, air_level, date, week, update_time];
+    return mm
+
+
+}
+
+$httpClient.get(hfapi, function(error, response, data){
     if (error){
         console.log(error);
         $done();                   
     } else {
-        var obj = JSON.parse(data);
-        console.log(obj);
-        var city = "所在城市：" + obj.city + "市";
-        var wea = "天气状况：" + obj.wea + "  当前" + obj.tem + "℃  " + obj.tem2 + "℃～" + obj.tem1 + "℃";
-        var air = "当前风力：" + obj.win + obj.win_speed + "  风速" + obj.win_meter + "\n空气指数：" + obj.air + "  " + obj.air_level + "\n更新时间：" + obj.date + " "+ obj.week + " "+ obj.update_time;
-        $notification.post(city,wea,air);
+        var mm = getwmatioin(data);
+        var title = "所在城市："+mm[0];
+        var subtitle = "天气状况："+mm[1]+"  "+mm[4]+"℃~"+mm[3]+"℃"+"  "+"当前"+mm[2]+"℃";
+        var mation = "其他指数："+mm[5]+mm[6]+"风速"+mm[7]+"空气指数："+mm[8]+"  "+mm[9]+"\n更新时间："+mm[6];
+        $notification.post(title, subtitle, mation);
         $done();
     }
 }
