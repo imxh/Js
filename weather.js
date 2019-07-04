@@ -29,7 +29,7 @@ $httpClient.get(hfapi, function(error, response, data){
         var mm = getwmatioin(data);
         var title = "所在城市："+mm[0];
         var subtitle = "天气状况："+mm[1]+"  "+mm[4]+"℃~"+mm[3]+"℃"+"  "+"当前"+mm[2]+"℃";
-        var mation = "当前风力："mm[5]+"  "+mm[6]+"  "+"空气指数："+mm[8]+"  "+mm[9]+"\n更新时间："+mm[10]+"  "+mm[11]+"  "+mm[12];
+        var mation = "当前风力："+mm[5]+"  "+mm[6]+"  "+"空气指数："+mm[8]+"  "+mm[9]+"\n更新时间："+mm[10]+"  "+mm[11]+"  "+mm[12];
         $notification.post(title, subtitle, mation);
         $done();
     }
