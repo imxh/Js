@@ -3,8 +3,8 @@ var url = $request.url;
 const path = "/ucp/index";
 let obj = JSON.parse(body);
 if (url.indexOf(path) != -1) {
-	obj["down_daily_remainders"] = "99";
-  obj["play_daily_remainders"] = "999";
+	obj.data.uinfo["down_daily_remainders"] = "99";
+        obj.data.uinfo["play_daily_remainders"] = "999";
 	body = JSON.stringify(obj);
  }
 $done({body});
