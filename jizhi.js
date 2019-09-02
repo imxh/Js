@@ -3,6 +3,7 @@ var url = $request.url;
 const path = "/pan/task/add";
 const path1 = "/pan/user/quota";
 const path2 = "/pan/disk";
+const path3 = "/pan/video/";
 let obj = JSON.parse(body);
 if (url.indexOf(path) != -1) {
 	obj["status"] = "true";
@@ -16,6 +17,9 @@ if (url.indexOf(path) != -1) {
 	obj.data["sysDisk"] = "300";
 	obj.data["percent"] = "1";
 	obj.data["userDisk"] = "3";
+	obj["status"] = "true";
+ }
+ if (url.indexOf(path3) != -1) {
 	obj["status"] = "true";
  }
 body = JSON.stringify(obj);
