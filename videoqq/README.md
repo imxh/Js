@@ -1,6 +1,6 @@
 转发自：https://github.com/chavyleung/scripts/tree/master/videoqq
-Surge：
 
+Surge：
 hostname = *.video.qq.com
 
 cron "1 0 * * *" script-path=https://github.com/imxh/js/raw/master/videoqq/videoqq.js,script-update-interval=0
