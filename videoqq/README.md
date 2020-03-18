@@ -1,3 +1,4 @@
+转发自：https://github.com/chavyleung/scripts/tree/master/videoqq
 Surge：
 
 hostname = *.video.qq.com
