@@ -1,0 +1,5 @@
+[Script]
+看漫画极速版.js = type=http-response,requires-body=1,pattern=https?://getuserinfo.321mh.com/app_api/v5/getuserinfo/,script-path=https://raw.githubusercontent.com/scomper/Surge/master/Scripts/wb_launch.js
+知音漫画.js= type=http-response,requires-body=1,pattern=^https://getuserinfo-globalapi.zymk.cn/app_api/v5/(getuserinfo|coin_account|getuserinfo_ticket|getcomicinfo)/,script-path=https://raw.githubusercontent.com/scomper/Surge/master/Scripts/wb_launch.js
+[MITM]
+hostname = %INSERT% getuserinfo-globalapi.zymk.cn, getuserinfo.321mh.com
