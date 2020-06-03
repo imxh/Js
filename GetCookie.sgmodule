@@ -1,5 +1,5 @@
-#!name=签到脚本
-#!desc=该模块用于获取Cookie并定时签到
+#!name=获取Cookie
+#!desc=该模块用于获取常用的Cookie
 #!system=ios
 
 [Script]
@@ -7,8 +7,5 @@
 京东签到Cookie = type=http-request,pattern=https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean,script-path=https://raw.githubusercontent.com/imxh/Js/master/Cookie/JD_DailyBonus.js
 腾讯视频Cookie = type=http-request,pattern=^https:\/\/vip\.video\.qq\.com\/?.?,script-path=https://raw.githubusercontent.com/imxh/Js/master/Cookie/VideoQQCookie.js
 
-爱奇艺签到 = type=cron,cronexp="0 0 * * *",script-path=https://raw.githubusercontent.com/imxh/Js/master/Cookie/iQIYI.js
-京东签到 = type=cron,cronexp="0 0 * * *",script-path=https://raw.githubusercontent.com/imxh/Js/master/Cookie/JD_DailyBonus.js
-腾讯视频签到 = type=cron,cronexp="0 0 * * *",script-path=https://raw.githubusercontent.com/imxh/Js/master/Task/VideoQQ.js
 [MITM]
 hostname = %APPEND% *.iqiyi.com, api.m.jd.com, vip.video.qq.com
