@@ -1,5 +1,5 @@
-#!name=获取签到Cookie
-#!desc=该模块用于获取Cookie
+#!name=签到脚本
+#!desc=该模块用于获取Cookie并定时签到
 #!system=ios
 
 [Script]
