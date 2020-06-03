@@ -1,6 +1,11 @@
+#!name=获取签到Cookie
+#!desc=该模块用于获取Cookie
+#!system=ios
+
 [Script]
 爱奇艺Cookie = type=http-request,pattern=https?:\/\/.*\.iqiyi\.com\/.*authcookie=,script-path=https://raw.githubusercontent.com/imxh/Js/master/Cookie/iQIYI.js
 京东签到Cookie = type=http-request,pattern=https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean,script-path=https://raw.githubusercontent.com/imxh/Js/master/Cookie/JD_DailyBonus.js
 腾讯视频Cookie = type=http-request,pattern=^https:\/\/vip\.video\.qq\.com\/?.?,script-path=https://raw.githubusercontent.com/imxh/Js/master/Cookie/VideoQQCookie.js
+
 [MITM]
 hostname = %APPEND% *.iqiyi.com, api.m.jd.com, vip.video.qq.com
