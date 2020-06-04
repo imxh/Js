@@ -1,6 +1,10 @@
-#!name=Break
-#!desc=该模块用于破解软件会员功能
+#!name=Break/Remove ads
+#!desc=该模块用于破解软件会员功能,除去部分广告
 #!system=ios
+
+[URL Rewrite]
+# > 知音漫画
+^http:\/\/image\.yqmh\.com\/advertise\/ - reject
 
 [Script]
 看漫画极速版.js = type=http-response,requires-body=1,pattern=https?://getuserinfo.321mh.com/app_api/v5/getuserinfo/,script-path=https://raw.githubusercontent.com/imxh/Js/master/Break/kanmanhuajisuban.js
