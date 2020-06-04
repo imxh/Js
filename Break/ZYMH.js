@@ -17,6 +17,7 @@ let user = '/app_api/v5/getuserinfo/';
 let coin = '/app_api/v5/coin_account/';
 let ticket = '/app_api/v5/getuserinfo_ticket/';
 let free = '/app_api/v5/getcomicinfo/';
+let chap = '/app_api/v5/purchase_chapters_coin/';
 
 if (url.indexOf(user) != -1) {
 	body.data.coins = 6666;
@@ -36,6 +37,12 @@ else if (url.indexOf(ticket) != -1) {
 else if (url.indexOf(free) != -1) {
 	body.data.price = 0;
 	body.data.download_price = 0;
+}
+
+else if (url.indexOf(chap) != -1) {
+	body.data.Cgold = 6666;
+	body.data.Cticket = 6666;
+	body.data.isvip = 1;
 }
 
 	body = JSON.stringify(body);
