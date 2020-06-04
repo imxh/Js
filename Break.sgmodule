@@ -9,6 +9,8 @@ URL-REGEX,^https?://gw.alicdn.com/(t(f|p)s/.+\d{3,4}-\d{4}|mt),REJECT
 URL-REGEX,^https?:\/\/render\.alipay\.com\/p\/s\/h5data\/prod\/spring-festival-2019-h5data\/popup-h5data\.json,REJECT
 URL-REGEX,^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.wireless\.home\.splash\.awesome\.get\/,REJECT
 AND,((URL-REGEX,\/amdc\/mobileDispatch),(USER-AGENT,%E6%89%8B%E6%9C%BA%E6%B7%98%E5%AE%9D*)),REJECT
+# > 微博
+DOMAIN,adimg.vue.weibo.com,REJECT
 
 [URL Rewrite]
 # > 知音漫画
@@ -30,6 +32,9 @@ douyin_follow.js = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aw
 douyin_naerby.js = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme\/v1\/nearby\/feed\/,requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/scomper/Surge/master/Scripts/douyin_nearby.js
 # > 淘宝
 TaobaoPrice.js = requires-body=1,script-path=https://raw.githubusercontent.com/primovist/ScriptsForSurge/master/Scripts/TaobaoPrice.js,pattern=^https?:\/\/trade-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.detail\.getdetail,type=http-response,max-size=-1
+# > 微博
+WeiboADs.js = requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/primovist/ScriptsForSurge/master/Scripts/WeiboADs.js,pattern=^https?://m?api\.weibo\.c(n|om)/2/(statuses/(unread|extend|positives/get|(friends|video)(/|_)(mix)?timeline)|stories/(video_stream|home_list)|(groups|fangle)/timeline|profile/statuses|comments/build_comments|photo/recommend_list|service/picfeed|searchall|cardlist|page|!/photos/pic_recommend_status|video/tiny_stream_video_list),type=http-response
+WeiboLaunch.js = requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/primovist/ScriptsForSurge/master/Scripts/WeiboLaunch.js,pattern=^https?:\/\/(sdk|wb)app\.uve\.weibo\.com(\/interface\/sdk\/sdkad.php|\/wbapplua\/wbpullad.lua),type=http-response
 
 [MITM]
-hostname = %APPEND% getuserinfo-globalapi.zymk.cn, getuserinfo.321mh.com, mp.weixin.qq.com, *.amemv.com, aweme.snssdk.com, render.alipay.com, gw.alicdn.com, *acs.m.taobao.com
+hostname = %APPEND% getuserinfo-globalapi.zymk.cn, getuserinfo.321mh.com, mp.weixin.qq.com, *.amemv.com, aweme.snssdk.com, render.alipay.com, gw.alicdn.com, *acs.m.taobao.com, *ap*.weibo.c*
