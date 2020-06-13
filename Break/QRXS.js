@@ -1,6 +1,7 @@
 /*
+奇热小说破解付费阅读，使用前切换翻页模式为平滑翻页。
 Surge4：
-http-response ^https?:\/\/api\.weiqire\.com/ios41\/ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Zymh.js
+http-response ^https?:\/\/api\.weiqire\.com/ios41\/ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/imxh/Js/master/Break/QRXS.js
 MITM = api.weiqire.com
 */
 let url = $request.url;
