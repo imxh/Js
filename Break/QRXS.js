@@ -1,5 +1,7 @@
 /*
-
+Surge4：
+http-response ^https?:\/\/api\.weiqire\.com/ios41\/ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Zymh.js
+MITM = api.weiqire.com
 */
 let url = $request.url;
 let body = JSON.parse($response.body);
