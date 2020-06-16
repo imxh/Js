@@ -17,6 +17,7 @@ DOMAIN,adimg.vue.weibo.com,REJECT
 [URL Rewrite]
 # > 知音漫画
 ^http:\/\/image\.yqmh\.com\/advertise\/ - reject
+
 [Script]
 看漫画极速版.js = type=http-response,requires-body=1,pattern=https?://getuserinfo.321mh.com/app_api/v5/getuserinfo/,script-path=https://raw.githubusercontent.com/imxh/Js/master/Break/kanmanhuajisuban.js
 知音漫画.js = type=http-response,requires-body=1,pattern=^https://getuserinfo-globalapi.zymk.cn/app_api/v5/(getuserinfo|coin_account|getuserinfo_ticket|getcomicinfo)/,script-path=https://raw.githubusercontent.com/imxh/Js/master/Break/ZYMH.js
@@ -26,5 +27,6 @@ TaobaoPrice.js = requires-body=1,script-path=https://raw.githubusercontent.com/p
 # > 微博
 WeiboADs.js = requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/primovist/ScriptsForSurge/master/Scripts/WeiboADs.js,pattern=^https?://m?api\.weibo\.c(n|om)/2/(statuses/(unread|extend|positives/get|(friends|video)(/|_)(mix)?timeline)|stories/(video_stream|home_list)|(groups|fangle)/timeline|profile/statuses|comments/build_comments|photo/recommend_list|service/picfeed|searchall|cardlist|page|!/photos/pic_recommend_status|video/tiny_stream_video_list),type=http-response
 WeiboLaunch.js = requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/primovist/ScriptsForSurge/master/Scripts/WeiboLaunch.js,pattern=^https?:\/\/(sdk|wb)app\.uve\.weibo\.com(\/interface\/sdk\/sdkad.php|\/wbapplua\/wbpullad.lua),type=http-response
+
 [MITM]
 hostname = %APPEND% getuserinfo-globalapi.zymk.cn, getuserinfo.321mh.com, mp.weixin.qq.com, render.alipay.com, gw.alicdn.com, *acs.m.taobao.com, *ap*.weibo.c*
