@@ -6,7 +6,7 @@
 爱奇艺Cookie = type=http-request,pattern=https?:\/\/.*\.iqiyi\.com\/.*authcookie=,script-path=https://raw.githubusercontent.com/imxh/Js/master/Cookie/iQIYI.js
 京东签到Cookie = type=http-request,pattern=https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
 腾讯视频Cookie = type=http-request,pattern=^https:\/\/vip\.video\.qq\.com\/?.?,script-path=https://raw.githubusercontent.com/imxh/Js/master/Cookie/VideoQQCookie.js
-//芒果TVCookie = type=http-request,pattern=^https:\/\/credits.bz.mgtv.com\/user\/creditsTake,script-path=https://raw.githubusercontent.com/imxh/Js/master/Cookie/MGTVCookie.js
+# 芒果TVCookie = type=http-request,pattern=^https:\/\/credits.bz.mgtv.com\/user\/creditsTake,script-path=https://raw.githubusercontent.com/imxh/Js/master/Cookie/MGTVCookie.js
 网易云音乐Cookie = type=http-request,pattern=^https?:\/\/music\.163\.com\/?.?,script-path=https://raw.githubusercontent.com/imxh/Js/master/Cookie/NetEaseMusicCookie.js
 [MITM]
 hostname = %APPEND% *.iqiyi.com, api.m.jd.com, vip.video.qq.com,  music.163.com
