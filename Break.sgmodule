@@ -18,8 +18,11 @@ DOMAIN,adimg.vue.weibo.com,REJECT
 看漫画极速版.js = type=http-response,requires-body=1,pattern=https?://getuserinfo.321mh.com/app_api/v5/getuserinfo/,script-path=https://raw.githubusercontent.com/imxh/Js/master/Break/kanmanhuajisuban.js
 知音漫画.js = type=http-response,requires-body=1,pattern=^https://getuserinfo-globalapi.zymk.cn/app_api/v5/(getuserinfo|coin_account|getuserinfo_ticket|getcomicinfo)/,script-path=https://raw.githubusercontent.com/imxh/Js/master/Break/ZYMH.js
 微信去广告.js = type=http-request,pattern=^https://mp\.weixin\.qq\.com/mp/getappmsgad,script-path=https://raw.githubusercontent.com/scomper/Surge/master/Scripts/WeChat.js
+# > 京东
+jd_price.js = type=http-response,pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js,script-update-interval=0
 # > 淘宝
-
+tb_price.js = requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js,type=http-request,pattern=^http://.+/amdc/mobileDispatch
+tb_price.js = requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js,type=http-response,pattern=^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail
 # > 微博
 WeiboADs.js = requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/primovist/ScriptsForSurge/master/Scripts/WeiboADs.js,pattern=^https?://m?api\.weibo\.c(n|om)/2/(statuses/(unread|extend|positives/get|(friends|video)(/|_)(mix)?timeline)|stories/(video_stream|home_list)|(groups|fangle)/timeline|profile/statuses|comments/build_comments|photo/recommend_list|service/picfeed|searchall|cardlist|page|!/photos/pic_recommend_status|video/tiny_stream_video_list),type=http-response
 WeiboLaunch.js = requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/primovist/ScriptsForSurge/master/Scripts/WeiboLaunch.js,pattern=^https?:\/\/(sdk|wb)app\.uve\.weibo\.com(\/interface\/sdk\/sdkad.php|\/wbapplua\/wbpullad.lua),type=http-response
@@ -27,4 +30,4 @@ WeiboLaunch.js = requires-body=1,max-size=-1,script-path=https://raw.githubuserc
 Kuwo.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Kuwo.js,type=http-response,pattern=^https?:\/\/vip1\.kuwo\.cn\/(vip\/v2\/user\/vip|vip\/spi/mservice)
 KuWoMusicDownload.js = script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/KuWoMusicDownload.js,type=http-request,pattern=^https?:\/\/musicpay\.kuwo.cn\/music\.pay\?uid=\d+
 [MITM]
-hostname = %APPEND% getuserinfo-globalapi.zymk.cn, getuserinfo.321mh.com, mp.weixin.qq.com, render.alipay.com, gw.alicdn.com, *ap*.weibo.c*, vip1.kuwo.cn
+hostname = %APPEND% getuserinfo-globalapi.zymk.cn, getuserinfo.321mh.com, mp.weixin.qq.com, *ap*.weibo.c*, vip1.kuwo.cn, trade-acs.m.taobao.com
