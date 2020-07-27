@@ -8,3 +8,4 @@
 腾讯视频签到 = type=cron,cronexp="0 0 * * *",script-path=https://raw.githubusercontent.com/imxh/Js/master/Task/VideoQQ.js
 网易云音乐签到 = type=cron,cronexp="0 0 * * *",script-path=https://raw.githubusercontent.com/imxh/Js/master/Task/NetEaseMusic.js
 天气提醒 = type=cron,cronexp="0 6,12,17 * * *",script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/caiyun.js
+qq会员签到 = type=cron,cronexp="0 0 0,1 * * ?",wake-system=1,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/QQVip/qqVipCheckIn.js
