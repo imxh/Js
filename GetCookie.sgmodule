@@ -7,6 +7,5 @@
 京东签到Cookie = type=http-request,pattern=https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
 腾讯视频Cookie = type=http-request,pattern=^https:\/\/vip\.video\.qq\.com\/?.?,script-path=https://raw.githubusercontent.com/imxh/Js/master/Cookie/VideoQQCookie.js
 网易云音乐Cookie = type=http-request,pattern=^https:\/\/music.163.com\/weapi\/user\/level,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/neteasemusic.cookie.js
-//qq会员获取cookie = type=http-request,pattern=https:\/\/proxy.vac.qq.com\/cgi-bin\/srfentry.fcgi,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/QQVip/qqVipCheckIn.js
 [MITM]
-hostname = %APPEND% iface?.iqiyi.com, api.m.jd.com, vip.video.qq.com, music.163.com, proxy.vac.qq.com
+hostname = %APPEND% ifac*.iqiyi.com, api.m.jd.com, vip.video.qq.com, music.163.com
